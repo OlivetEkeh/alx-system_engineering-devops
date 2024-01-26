@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-Bash script that stops 4-to_infinity_and_beyond process.
+#Bash script that stops 4-to_infinity_and_beyond process.
 
 
 # Assuming the process name is 4-to_infinity_and_beyond
@@ -8,5 +8,3 @@ process_name="4-to_infinity_and_beyond"
 
 # Use pkill to stop the process
 pkill -f "$process_name"
-
-echo "Process $process_name stopped."
