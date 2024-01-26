@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+#Bash script that stops 4-to_infinity_and_beyond process.
+
+
+# Assuming the process name is 4-to_infinity_and_beyond
+# You can replace it with the actual process name if needed
+process_name="4-to_infinity_and_beyond"
+
+# Get the PID of the process
+pid=$(pgrep -f "$process_name")
+
+# Check if the process is running
+if [ -n "$pid" ]; then
+    # Send a SIGINT signal to gracefully stop the process
+    kill -s SIGINT "$pid"
+    echo "Process $process_name stopped gracefully."
+else
+    echo "Process $process_name is not running."
+fi
